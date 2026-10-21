@@ -1,6 +1,8 @@
 <?php
 // includes/footer.php
 ?>
-<footer>
-    <p>&copy; 2026 FirstVault Bank. All rights reserved.</p>
+<footer class="main-footer">
+    <div class="footer-container">
+        <p>&copy; <?= date('Y') ?> FirstVault Bank Systems. Built for secure training & educational simulation.</p>
+    </div>
 </footer>

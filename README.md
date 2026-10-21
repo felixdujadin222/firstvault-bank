@@ -81,22 +81,24 @@ firstvault-bank/
 ├── admin/
 │   └── index.php          # Admin / organizer interface
 ├── api/
-│   └── account.php        # JSON API endpoint
+│   ├── account.php        # Account info JSON API endpoint
+│   └── balance.php        # Real-time balance JSON API endpoint
 ├── css/
-│   └── style.css          # Application styling
+│   └── style.css          # Design system & dark fintech UI styling
 ├── includes/
 │   ├── db.php             # Database connection setup
 │   ├── header.php         # Navigation & header layout
 │   ├── footer.php         # Footer layout
-│   └── session.php        # Session handler
+│   └── session.php        # Session handler & auto-login
 ├── account.php            # Account summary view
-├── dashboard.php          # Main customer dashboard
-├── index.php              # Landing / login page
+├── dashboard.php          # Main customer dashboard & virtual card
+├── index.php              # Modern landing hero page
+├── login.php              # Sign-in portal with quick demo helpers
 ├── logout.php             # Session termination
-├── profile.php            # User profile view
-├── register.php           # User registration
-├── statement.php          # Transaction statement history
-├── transfer.php           # Fund transfer functionality
+├── profile.php            # User profile view and editor
+├── register.php           # User registration with starter balance
+├── statement.php          # Transaction statement history & metrics
+├── transfer.php           # Fund transfer functionality & presets
 ├── schema.sql             # Database schema and seed data
 └── README.md              # Project documentation
 ```
