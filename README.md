@@ -52,15 +52,38 @@ The database configuration can be customized via environment variables or direct
 | `DB_USER` | `root` | Database username |
 | `DB_PASS` | *(empty)* | Database password |
 
-### 3. Run the Application
+### 3. Run with Docker (Recommended)
 
-Using PHP's built-in web server:
+To launch both the web application and pre-seeded MySQL database with one command:
+
+```bash
+docker compose up -d
+```
+
+Navigate to `http://localhost:8080`.
+
+### 4. Run with Local PHP Server
 
 ```bash
 php -S localhost:8000
 ```
 
-Open your browser and navigate to `http://localhost:8000`.
+Navigate to `http://localhost:8000`.
+
+---
+
+## 🌐 Deploying & Hosting Online (Publicly)
+
+You can host this repository publicly on several cloud platforms:
+
+1. **Render / Railway / Fly.io**:
+   - Link your GitHub repository `https://github.com/felixdujadin222/firstvault-bank`.
+   - Deploy using the included [`Dockerfile`](Dockerfile) or as a Web Service.
+   - Attach a managed MySQL database and supply `DB_HOST`, `DB_NAME`, `DB_USER`, and `DB_PASS` in your environment variables.
+2. **Traditional Free PHP Web Hosting (InfinityFree, 000WebHost, etc.)**:
+   - Upload the project files to your `htdocs` or `public_html` directory.
+   - Create a MySQL database and import [`schema.sql`](schema.sql) via phpMyAdmin.
+   - Configure your database credentials in [`includes/db.php`](includes/db.php).
 
 ---
 
