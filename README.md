@@ -37,13 +37,15 @@ cd firstvault-bank
 
 ### 2. Configure the Database
 
-Import the provided `schema.sql` into your MySQL instance:
+You can configure and seed the database using either method:
 
-```bash
-mysql -u root -p < schema.sql
-```
+- **Method A — Web Installer Wizard (Easiest)**: Navigate to `http://localhost:8000/install.php` (or your deployed server domain) and click **"Initialize & Seed Database"**.
+- **Method B — Import via CLI**:
+  ```bash
+  mysql -u root -p < schema.sql
+  ```
 
-The database configuration can be customized via environment variables or directly in [`includes/db.php`](includes/db.php):
+The database configuration can also be customized via environment variables or directly in [`includes/db.php`](includes/db.php):
 
 | Variable | Default Value | Description |
 | :--- | :--- | :--- |
@@ -116,6 +118,7 @@ firstvault-bank/
 ├── account.php            # Account summary view
 ├── dashboard.php          # Main customer dashboard & virtual card
 ├── index.php              # Modern landing hero page
+├── install.php            # 1-click database setup & migration wizard
 ├── login.php              # Sign-in portal with quick demo helpers
 ├── logout.php             # Session termination
 ├── profile.php            # User profile view and editor
@@ -123,6 +126,8 @@ firstvault-bank/
 ├── statement.php          # Transaction statement history & metrics
 ├── transfer.php           # Fund transfer functionality & presets
 ├── schema.sql             # Database schema and seed data
+├── Dockerfile             # Production PHP 8.2 Apache container image
+├── docker-compose.yml     # Local orchestration with auto-seeded MySQL
 └── README.md              # Project documentation
 ```
 
